@@ -1,0 +1,121 @@
+/* GLOBAL dùng chung chi toàn trang web */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #faf4f2;
+}
+
+/* HEADER*/
+.header{
+   /* padding: 10px 50px; */
+   padding: 10px 60px;
+   background-color: #f8e1db;
+}
+
+
+.header ul{
+    list-style-type: none;
+    margin-top: 10px;
+}
+.header li{
+    display: inline;
+    /* margin: 10px 5px; */
+    margin-right: 40px;
+    
+}
+.header ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.header .active a{
+    color: orangered;
+}
+/* .header a img{
+    width: 40px;
+    height: 40px;
+} */
+
+/* CAROUSEL */
+.carousel{
+    background-image: url(../img/BG.png);
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ACTIVITES */
+.activities .activities-title{
+    margin-bottom: 20px;
+}
+.activities .activities-title img{
+    margin: 50px 645px 5px 645px;
+}
+.activities .activities-title h2{
+    text-align: center;
+    color: #8d8d8d;
+    font-size: 30px;
+}
+.activities-item{
+    float: left;
+    width: 25%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.activities-background{
+    background-color: white;
+     padding: 20px 0px;
+     border-radius: 15px;
+}
+
+.activities .activities-img img{
+    width: 80%;
+    border-radius: 15px;
+}
+
+.activities .activities-info h3{
+    margin: 15px 0px;
+}
+
+.activities .activities-info p{
+    /* margin-bottom: 25px; */
+    font-size: 16px;
+    /* padding: 0px 20px; */
+    margin: 0px 20px 25px 20px;
+    color: #8d8d8d;
+}
+
+.clear{
+    clear: both;
+}
+
+.activities .activities-info .button{
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color:#e8e8e8;
+    border: none;
+    color: #8d8d8d;
+}
+
+.activities .activities-viewall button{
+    margin: 25px 45% 25px 45%;
+    border-radius: 20px;
+    width: 150px;
+    height: 35px;
+    
+    border: 1px solid #e87b61;
+    color: #e87b61;
+}
+
+/* CONTACT */
+/* .box2{
+    position:absolute;
+    top: 1200px;
+    left: -190px;
+} */
