@@ -1,0 +1,991 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #636363;
+
+    /* Đặt body là vị trí  cha cho thẻ header*/
+    position: relative;
+}
+
+/* GLOBAL */
+
+.but_gradient {
+    text-transform: uppercase;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.5s;
+    font-size: 15px;
+
+    /* linear-gradient(hướng trải màu, danh sách các màu );
+      _ to right: màu đang được trải từ trái sang phải
+      _ #fc00ff 0%, #00dbde 51%, #fc00ff 100%: thứ tự màu cần trải, phần trăm sau mã màu là vị trí bắt đầu trải của màu đó.
+        Nếu không thêm phần trăm thì li */
+
+    background-image: linear-gradient(to right, #f56886 0%, #f8ae56 50%, #f56886 100%);
+    /*background-color: #F76B1C;
+     background-image: linear-gradient(90deg, #F76B1C 0%, #f56886 50%,  #FAD961 100%); */
+
+
+    background-size: 200%;
+    cursor: pointer;
+}
+
+.but_gradient:hover {
+    background-position: right center;
+}
+
+
+
+.title p:first-of-type {
+    color: #f55f8d;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.title h2 {
+    color: #262626;
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 75px;
+    margin-bottom: 20px;
+}
+
+.container {
+    /* không bị bể web cố định các thành phần trong web */
+    /* width: 1200px; */
+    /* bị bể web các thành phần trong web bị bể  */
+    width: 79%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+    position: absolute;
+
+
+
+    /*??? tại sao đặt with là 100% thì ngay giữa + lý do */
+    width: 100%;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 40px 0px; */
+    align-items: center;
+}
+
+.header__content nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.header__content nav ul {
+    list-style: none;
+    display: flex;
+
+}
+
+.header__content nav ul li a {
+    text-decoration: none;
+    color: #29303a;
+    font-weight: bold;
+
+}
+
+.header__content nav ul li {
+    padding: 55px 20px;
+}
+
+.header__content nav ul li a:hover {
+    transition: all 0.5s;
+}
+
+.header__content nav ul li a:hover {
+    color: #f55f8d;
+}
+
+.header__content nav ul li a span {
+    display: inline-block;
+}
+
+.header__content nav ul li a:hover span {
+    animation: upToDown 0.3S;
+}
+
+@keyframes upToDown {
+    49% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    51% {
+        opacity: 1;
+    }
+}
+
+.container .header__content nav ul li a i {
+    font-size: 10px;
+
+
+    vertical-align: middle;
+    /*???? sự khác nhau giữa  overflow: auto; và vertical-align: middle; */
+}
+
+/* CAROUSEL */
+
+#carousel {
+    background-image: url(../img/pic2.png);
+    background-position: top;
+    padding-top: 180px;
+    background-size: contain;
+}
+
+#carousel .carousel__content {
+    display: flex;
+    align-items: center;
+}
+
+#carousel .carousel__content .carousel__img {
+    margin-left: 40px;
+}
+
+
+#carousel .carousel__content .carousel__img img {
+    width: 100%;
+}
+
+#carousel .carousel__content .carousel__left {
+    width: 60%;
+}
+
+#carousel .carousel__content .carousel__right {
+    width: 40%;
+}
+
+#carousel .carousel__content .carousel__left .carousel__article p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#carousel .carousel__content .carousel__left .carousel__article ul {
+    list-style: none;
+}
+
+#carousel .carousel__content .carousel__left .carousel__article ul li {
+    padding: 15px 0 15px 0px;
+    font-size: 20px;
+}
+
+#carousel .carousel__content .carousel__left .carousel__article ul li i {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 30px;
+    color: white;
+    background-image: linear-gradient(to right, #f56886 0%, #f8ae56 50%, #f56886 100%);
+
+    margin-right: 10px;
+}
+
+/* SERVICES */
+
+#services {
+    padding-top: 100px;
+    background-image: url(../img/bg2.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+#services .services__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#services .services__content .services__item {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+
+#services .services__content .services__item:hover {
+    transform: translateY(-20px);
+}
+
+#services .services__content .services__item h3 {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+#services .services__content .services__item p {
+    margin-top: 15px;
+}
+
+#services .services__content .services__item img {
+    width: 70%;
+}
+
+/* BUSINESS */
+#business {
+    background-image: url(../img/bg15.png);
+    background-position: center;
+
+    /* ????? Luôn luôn lấy 100% kích thước hình */
+    background-size: 100%;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    padding-top: 150px;
+    padding-bottom: 70px;
+
+}
+
+#business .business__content {
+    display: flex;
+
+
+    /*?????????? Khác nhau giữa thuộc tính right và flex-end */
+    justify-content: flex-end;
+
+
+    /*?????????? justify-content: right; */
+    align-items: center;
+    position: relative;
+}
+
+#business .business__left {
+    width: 50%;
+    position: absolute;
+    left: -13.3%;
+}
+
+#business .business__right {
+    width: 50%;
+}
+
+#business .business__left img {
+    width: 100%;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+#business .business__article p {
+    margin-bottom: 20px;
+}
+
+#business .business__article ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+#business .business__article ul li {
+    padding: 5px 0;
+}
+
+#business .business__article ul li i {
+    color: #f55f8d;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+/* FIGURES */
+
+#figures {
+    background-image: url(../img/bg14.png);
+    background-position: center;
+    background-size: 100%;
+    padding-top: 150px;
+    padding-bottom: 70px;
+}
+
+#figures .figures__content {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+/* ???? justify-content: space-around lại áp dụng thêm with */
+/* #figures .figures__content .figures__item {
+    width: 25%;
+} */
+
+#figures .figures__content .figures__item i {
+    font-size: 50px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background-image: linear-gradient(to right, #f56886 0%, #f8ae56 50%, #f56886 100%);
+    background-size: 200%;
+    border-radius: 50%;
+    color: white;
+}
+
+
+#figures .figures__content .figures__item p:first-of-type {
+    font-size: 70px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #f55f8d;
+}
+
+#figures .figures__content .figures__item p:last-of-type {
+    font-size: 20px;
+    color: #262626;
+}
+
+/* FEATURES */
+
+#features .features__content {
+    display: flex;
+    align-items: center;
+}
+
+#features .features__left {
+    width: 50%;
+}
+
+#features .features__left .features__group .features__item {
+    padding: 0px 40px 20px 0px;
+    margin-bottom: 20px;
+}
+
+#features .features__left .features__group .features__item:nth-child(2) {
+    padding: 0px 0px 20px 40px;
+}
+
+#features .features__left .features__group .features__item .features__background {
+    position: relative;
+    /* z là trục z là trục chiều sâu chiều từ người dùng nhìn vào màn hình */
+    z-index: 1;
+    display: flex;
+    background-color: white;
+    /* background-color: #f8ae56; */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+#features .features__left .features__group .features__item .features__background::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #f56886 0%, #f8ae56 50%, #f56886 100%);
+    background-size: 200%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#features .features__left .features__group .features__item .features__background:hover::after {
+    opacity: 1;
+}
+
+#features .features__left .features__group .features__item .features__background i {
+    font-size: 90px;
+    color: #f55f8d;
+    margin-right: 30px;
+    /* Z : là trục Z là chiều sâu từ mắt người dùng đén màn hình   */
+    /* z-index:  định nghĩa thứ tự của các thẻ position 
+    Mặc định thẻ nào có position và tạo ra trước (theo thứ tự code html từ trên xuống)  */
+    z-index: 1;
+    transition: all 1s;
+}
+
+#features .features__left .features__group .features__item .features__background:hover i {
+    color: #fff;
+}
+
+#features .features__left .features__group .features__item .features__background h3 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #262626;
+    margin-bottom: 10px;
+    transition: all 1s;
+}
+
+#features .features__left .features__group .features__item .features__background div {
+    z-index: 1;
+}
+
+#features .features__left .features__group .features__item .features__background:hover div h3 {
+    color: #fff;
+}
+
+#features .features__left .features__group .features__item .features__background p {
+    line-height: 25px;
+    transition: all 1s;
+}
+
+#features .features__left .features__group .features__item .features__background:hover div p {
+    color: #fff;
+}
+
+#features .features__right {
+    width: 50%;
+}
+
+#features .features__right img {
+    width: 113%;
+    animation-name: animate_right;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate_right {
+    /* [ rotate ] : làm cho phần tử xoay theo trục tâm của nó theo chiều kim đồng hồ ( chiều dương) và ngược chiều kim đồng (chiều âm ) với gốc xoay được quy định bới đơn vị deg( độ ) VD: transform: rotate( 1deg )   */
+
+    /* Trục X: lấy gốc từ đấy của phần tử -- Trục ngang   */
+    /* Trục Y: lấy gốc từ cạnh bên phải phần tử-- Trục dọc*/
+
+    /* [ skew ( X , Y) ]: làm cho phần tử nghiêng theo trục X và Y */
+    /* X: nếu giá trị X là âm thì phần tử nghiêng theo chiều dương và ngược lại */
+    /* Y: nếu giá trị Y là âm thì phần tử nghiêng theo chiều âm và ngược lại */
+
+    /* [ translate( X , Y )] : làm cho phần tử di chuyển vị trí theo giá trị của X và Y với Trục X: CHIỀU NGANG , Trục Y: CHIỀU CAO  */
+
+    /* Trục X: khi giá trị dương di chuyển vị trí phần tử từ trái qua phải khi giá trị âm di chuyển phần tử từ phải qua trái */
+
+    /* Trục Y: khi giá trị dương di chuyển phần tử từ trên xuống dưới và khi giá trị âm di chuyển phần tử từ dưới lên trên*/
+    0% {
+        transform: rotate(1deg) translate(2px, 2px);
+    }
+
+    50% {
+        transform: rotate(-1deg) translate(-2px, -2px);
+    }
+
+    100% {
+        transform: rotate(1deg) translate(2px, 2px);
+    }
+}
+
+/* POFOLIO */
+#portfolio {
+    background-image: url(../img/bg17.png);
+    background-size: cover;
+    background-position: top center;
+    padding-top: 100px;
+}
+
+#portfolio .title {
+    text-align: center;
+}
+
+#portfolio .title p {
+    font-size: 25px;
+}
+
+#portfolio .title h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+#portfolio .portfolio__content {
+    display: grid;
+    /* [ repeat ] : lăp lại */
+    /* repeat( 2 , 1fr) lặp lại 2 lần mỗi lần 1fr*/
+    /* grid-template-columns: repeat(2, 1fr) 1.5fr; /* Có thể quy định giá trị cho fr từ 1 or 1.1 trở lên */
+
+    grid-template-columns: repeat(7, 1fr);
+    gap: 35px;
+    object-fit: cover;
+}
+
+#portfolio .portfolio__content .portfolio__item img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    border-radius: 10px;
+}
+
+#portfolio .portfolio__content .item1 {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+}
+
+#portfolio .portfolio__content .item2 {
+    grid-column: 5 / span 3;
+    grid-row: 1/ span 2;
+}
+
+#portfolio .portfolio__content .item3 {
+    grid-column: 1 / span 2;
+
+}
+
+#portfolio .portfolio__content .item4 {
+    grid-column: 3 / span 2;
+}
+
+#portfolio .portfolio__content .item5 {
+    grid-column: 1 /span 4;
+}
+
+#portfolio .portfolio__content .item6 {
+    grid-column: 5 / span 3;
+    grid-row: 3 / span 2;
+}
+
+#portfolio .portfolio__content .portfolio__item {
+    position: relative;
+    /*[ overflow ] Khi chiều cao / chiều ngang của box không đủ chứa text, phần tử hay 1 phần của text hoặc phần tử đó , thì text, phần tử, 1 phần của text hoặc phần tử bị tràn đó sẽ được dấu đi. */
+    overflow: hidden;
+}
+
+#portfolio .portfolio__content .portfolio__item::before {
+    content: "";
+    top: 0;
+    left: -75%;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: block;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 252, 0.5) 100%);
+    transform: skewX(-10deg);
+    transition: all 0.5s;
+
+}
+
+#portfolio .portfolio__content .portfolio__item:hover::before {
+    left: 100%;
+}
+
+/* Tạo nền mờ cho ảnh */
+#portfolio .portfolio__content .portfolio__item .portfolio__overplay {
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+#portfolio .portfolio__content .portfolio__item:hover .portfolio__overplay {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#portfolio .portfolio__content .portfolio__item .portfolio__overplay .portfolio__icon {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 10px;
+    top: 25px;
+    right: 25px;
+    font-size: 30px;
+    background-image: linear-gradient(to right, #f56886 0%, #f8ae56 50%, #f56886 100%);
+    background-size: 200%;
+    transform: translate(25px, -25px);
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+#portfolio .portfolio__content .portfolio__item .portfolio__overplay .portfolio__icon a i {
+    color: #fff;
+}
+
+#portfolio .portfolio__content .portfolio__item .portfolio__overplay:hover .portfolio__icon {
+    transform: translate(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+#portfolio .portfolio__content .portfolio__item .portfolio__overplay .portfolio__text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    transform: translateY(100px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
+
+#portfolio .portfolio__content .portfolio__item:hover .portfolio__overplay .portfolio__text {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+#portfolio .portfolio__content .portfolio__item .portfolio__overplay .portfolio__text h3 {
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+#portfolio .portfolio__content .portfolio__item .portfolio__overplay .portfolio__text p {
+    color: #fff;
+    opacity: 0.5;
+}
+
+
+/* PROGRAM */
+#program {
+    background-image: url(../img/bg16.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    padding-top: 100px;
+}
+
+#program .title {
+    text-align: center;
+}
+
+#program .title h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+#program .title p {
+    font-size: 25px;
+}
+
+
+#program .program__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+#program .program__content .program__item {
+    box-shadow: 20px 20px 50px 0 rgba(0, 0, 0, 0.1);
+    color: #29303a;
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all 2s;
+}
+
+#program .program__content .program__item:hover {
+    
+
+    /* [ border-image ] cắt hình ảnh thành chín phần kiểu như bảng cờ caro như sau: */
+
+    /* 1   |  2   |  3  */
+
+    /* 4   |  5   |  6  */
+
+    /* 7   |  8   |  9  */
+
+
+    /* Lúc này ta chú ý các phần 1, 3, 7, 9 là bốn góc và nó cố định, phần 5 là vị trí trung tâm và những phần còn lại sẽ bị ảnh hưởng bởi các giá trị như round, repeat hoặc stretch bạn chỉ định. */
+
+    /* https://quantrimang.com/hoc/border-image-tao-duong-vien-bang-hinh-trong-css-163266 */
+
+    border-image: url('../img/br.png') 30 / 19px round;
+}
+
+#program .program__content .program__item img {
+    width: 40%;
+}
+
+#program .program__content .program__item h2 {
+    font-size: 30px;
+}
+
+#program .program__content .program__item p {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 0;
+    border-bottom: 1px solid #e1e1f0;
+}
+
+#program .program__content .program__item p span {
+    font-size: 3rem;
+    color: #f8ae56;
+}
+
+#program .program__content .program__item ul {
+    list-style: none;
+    font-size: 18px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+#program .program__content .program__item ul li {
+    margin-bottom: 15px;
+}
+
+#program .program__content .program__item ul li i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #feeff3;
+    color: #f56fa8;
+    font-size: 15px;
+    margin-right: 20px;
+
+}
+
+#program .program__content .program__item button {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* CLIENTS */
+#clients{
+    text-align: center;
+    background-image: url(../img/bg17.png);
+    background-position: top;
+    background-size: cover;
+    padding: 100px ;
+}
+
+#clients .title{
+    font-size: 50px;
+}
+
+.testimonial-comment .swiper-slide h3{
+    color: #262626;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.testimonial-comment .swiper-slide p:nth-of-type(1){
+    font-size: 20px;
+    color: #f56886;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.testimonial-comment .swiper-slide p:nth-of-type(2){
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.testimonial-comment .swiper-slide .testimonial-text{
+    position: relative;
+}
+
+.testimonial-comment .swiper-slide i{
+    position: absolute;
+    font-size: 60px;
+    color: #f55f8d;
+    top: 25px;
+    left: 30px;
+    transform: rotate(180deg);
+}
+
+.testimonial-thumbs .testimonial-pic img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    padding: 4px;
+    position: relative;
+    z-index: 2;
+    background-color: #f55f8d;
+  }
+  
+  .testimonial-thumbs {
+    width: 300px;
+    margin: auto;
+    box-sizing: border-box;
+    height: 170px;
+    position: relative;
+  }
+  
+  .testimonial-comment {
+    min-height: 300px;
+    width: 100%;
+  }
+
+  .testimonial-comment .swiper-wrapper {
+    padding-bottom: 20px;
+  }
+
+  .testimonial-thumbs .testimonial-pic {
+    padding: 30px 0 0;
+    transition: all 0.5s;
+  }
+
+  .testimonial-thumbs .swiper-slide-thumb-active .testimonial-pic {
+    padding: 0 0 40px;
+  }
+
+  .testimonial-text {
+    padding: 30px;
+    width: 60%;
+    text-align: center;
+    box-shadow: 0 20px 50px 0 rgb(0 0 0 / 10%);
+    margin: 20px 100px;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .testimonial-pic::before{
+    width: 15px;
+    height: 15px;
+    bottom: 35px;
+  }
+
+.testimonial-pic::after{
+    width: 10px;
+    height: 10px;
+    bottom: 10px;
+  }
+/* khi xét thuộc tính không nên xét / viết kết nối với class của thư viện vì css sẽ mặc định ưu tiên tìm đường liên kết css / class thuộc tính thư viện */
+/* Ví dụ  Class = "swiper-slide" là class thư viện*/
+
+/* khi viết .swiper-slide.testimonial-pic::before , .swiper-slide .testimonial-pic::after { opacity: 0 } */
+/* Khi chạy chương trình sẽ mặc định ưu tiên cho class thư viện */
+/* nên khi  */
+
+
+
+.testimonial-pic::before , .testimonial-pic::after{
+    content: "";
+    position: absolute;
+    background-color: #f55f8d;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+
+  }
+
+  .swiper-slide-thumb-active .testimonial-pic::after , .swiper-slide-thumb-active .testimonial-pic::before{
+    opacity: 1;
+}
+
+
+
+/* Cho class="shape-bx" opacity:0 để ẩn ảnh*/
+ .testimonial-pic .shape-bx{
+    position: relative;
+    height: 40px;
+    width: 60px;
+    left: 50%;
+    bottom: 19px;
+    background-color: #f55f8d;
+    background-image: url(../img/pattern12.png);
+    background-size: cover;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.testimonial-pic .shape-bx::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #f55f8d;
+    background-image: url(../img/pattern12.png);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+/* Khi chạy đến class="swiper-slide-thumb-active" cho shape-bx opacity: 1 để hiện ảnh */
+.swiper-slide-thumb-active .testimonial-pic .shape-bx{
+    opacity: 1;
+}
+
+.testimonial-content .swiper-pagination-bullet-active{
+    background-color: #f55f8d
+}
+
+/* BLOG */
+
+#blog .owl-carousel .blog__item{
+    border-radius: 10px;
+    background-color: rgb(245, 111, 168 ,0.14);
+    position: relative;
+}
+
+#blog .blog__item .blog__img img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+#blog .blog__item .blog__img p{
+    position: absolute;
+    display: inline-block;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    bottom: 196px;
+    left: 15px;
+    color: #fff;
+    background-image: linear-gradient(to right ,  #f56886 0%, #f8ae56 50%, #f56886 100%);
+    background-size: 200%;
+}
+
+#blog .blog__item .blog__content{
+    padding: 20px;
+    border-bottom: 1px solid rgba(99, 99, 99, 0.2);
+}
+
+#blog .blog__item .blog__content h3{
+    color: #262626;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+#blog .blog__item .blog__content p{
+    margin-top: 5px;
+}
+
+#blog .blog__item .blog__footer{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#blog .blog__item .blog__footer p{
+    text-transform: uppercase;
+}
+
+#blog .blog__item .blog__footer p:first-of-type{
+    margin-right: 15px;
+}
+
+#blog .blog__item .blog__footer p i , .blog__footer p span{
+    color: #f55f8d;
+}
+
+#blog .blog__item .blog__footer i{
+    font-size: 25px;
+    margin-right: 5px;
+    vertical-align: sub;
+}
